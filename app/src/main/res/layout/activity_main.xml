@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="monospace"
+        android:text="There are two boxes given below. Please enter your desired numbers in the boxes and then select the operator to get the result."
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Enter First Number"
+        android:inputType="number"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstNumber"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Enter Second Number"
+        android:inputType="number"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divide"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/textView2"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divide"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="150dp"
+        android:text="Result:" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/secondNumber"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"
+        android:onClick="add"
+        android:text="+"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/secondNumber"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/add"
+        android:backgroundTint="@color/black"
+        android:onClick="subtract"
+        android:text="-"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/secondNumber"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/subtract"
+        android:backgroundTint="@color/black"
+        android:onClick="multiply"
+        android:text="*"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/secondNumber"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/multiply"
+        android:backgroundTint="@color/black"
+        android:onClick="divide"
+        android:text="/"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
